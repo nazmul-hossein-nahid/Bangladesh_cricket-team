@@ -1,10 +1,11 @@
 import './App.css'
+import Layout from './Components/Layout/Layout'
 import Players from './Components/Players/Players'
 
 function App() {
   return (
-    <div>
-     <Players></Players>
+    <div className='container mx-auto'>
+     <Layout></Layout>
     </div>
   )
 }
