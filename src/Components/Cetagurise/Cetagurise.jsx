@@ -4,7 +4,7 @@ import { useState } from "react";
 const Cetagurise = ({carentCetagoris,setCarentCetagoris}) => {
  
   return (
-    <div className="text-center space-x-3 space-y-5 mx-2">
+    <div className="text-center space-x-3 space-y-5 mx-2 mb-5">
       <button onClick={() => setCarentCetagoris("All")} className="border-2 hover:bg-red-500 px-3 py-1 text-xl rounded-lg font-medium hover:text-white">
         All
       </button>
