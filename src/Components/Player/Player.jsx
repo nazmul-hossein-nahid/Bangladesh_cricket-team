@@ -1,15 +1,10 @@
-import { useState } from "react";
-
+import PropTypes from "prop-types";
 const Player = ({ player, setSelectedPlayer, selectedPlayer }) => {
-  const [selecte, setSelecte] = useState(false);
-  // setSelecte(!selecte);
   const handlSelected = (players) => {
     const isSelested = selectedPlayer.find(
       (player) => player.full_name == players.full_name
     );
-    console.log(isSelested);
     if (isSelested) {
-      
       return alert("Already selected");
     } else {
       setSelectedPlayer([...selectedPlayer, players]);
@@ -40,13 +35,19 @@ const Player = ({ player, setSelectedPlayer, selectedPlayer }) => {
               onClick={() => handlSelected(player)}
               className="w-full bg-green-500 hover:bg-green-600 text-2xl py-2 rounded-md text-white font-semibold"
             >
-              {selecte ? "Seleted" : " Select"}
+              Select
             </button>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+Player.propTypes = {
+  player: PropTypes.object.isRequired,
+  setSelectedPlayer: PropTypes.func.isRequired,
+  selectedPlayer: PropTypes.any.isRequired,
 };
 
 export default Player;

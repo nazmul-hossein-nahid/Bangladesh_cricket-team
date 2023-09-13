@@ -1,7 +1,5 @@
-import React from "react";
-import { useState } from "react";
-
-const Cetagurise = ({carentCetagoris,setCarentCetagoris}) => {
+import PropTypes from 'prop-types';
+const Cetagurise = ({setCarentCetagoris}) => {
  
   return (
     <div className="text-center space-x-3 space-y-5 mx-2 mb-5">
@@ -23,5 +21,8 @@ const Cetagurise = ({carentCetagoris,setCarentCetagoris}) => {
     </div>
   );
 };
+Cetagurise.propTypes ={
+  setCarentCetagoris: PropTypes.func.isRequired,
+}
 
 export default Cetagurise;

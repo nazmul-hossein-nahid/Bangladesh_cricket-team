@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Player from "../Player/Player";
+import PropTypes from 'prop-types';
 
 const Players = ({ carentCetagoris, selectedPlayer, setSelectedPlayer }) => {
   const [players, setPlayers] = useState([]);
@@ -43,5 +44,11 @@ const Players = ({ carentCetagoris, selectedPlayer, setSelectedPlayer }) => {
     </div>
   );
 };
+
+Players.propTypes ={
+  carentCetagoris: PropTypes.object.isRequired,
+  selectedPlayer: PropTypes.object.isRequired,
+  setSelectedPlayer: PropTypes.func.isRequired,
+}
 
 export default Players;
